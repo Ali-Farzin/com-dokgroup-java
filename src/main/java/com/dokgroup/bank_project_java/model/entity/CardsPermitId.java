@@ -1,0 +1,49 @@
+package com.dokgroup.bank_project_java.model.entity;
+
+import jakarta.persistence.Column;
+import jakarta.persistence.Embeddable;
+import org.hibernate.Hibernate;
+
+import java.util.Objects;
+import java.util.UUID;
+
+@Embeddable
+public class CardsPermitId implements java.io.Serializable {
+    private static final long serialVersionUID = -8347221052912187022L;
+    @Column(name = "\"CardUID\"", nullable = false)
+    private UUID cardUID;
+
+    @Column(name = "\"CardsActionTypeID\"", nullable = false)
+    private Long cardsActionTypeID;
+
+    public UUID getCardUID() {
+        return cardUID;
+    }
+
+    public void setCardUID(UUID cardUID) {
+        this.cardUID = cardUID;
+    }
+
+    public Long getCardsActionTypeID() {
+        return cardsActionTypeID;
+    }
+
+    public void setCardsActionTypeID(Long cardsActionTypeID) {
+        this.cardsActionTypeID = cardsActionTypeID;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || Hibernate.getClass(this) != Hibernate.getClass(o)) return false;
+        CardsPermitId entity = (CardsPermitId) o;
+        return Objects.equals(this.cardUID, entity.cardUID) &&
+                Objects.equals(this.cardsActionTypeID, entity.cardsActionTypeID);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(cardUID, cardsActionTypeID);
+    }
+
+}

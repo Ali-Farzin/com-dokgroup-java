@@ -1,9 +1,6 @@
 package com.dokgroup.bank_project_java.model.entity;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 
 import java.time.LocalDate;
 import java.time.OffsetDateTime;
@@ -11,7 +8,7 @@ import java.util.UUID;
 
 @Entity
 @Table(name = "\"Accounts\"", schema = "Acnt")
-public class Account {
+public class Accounts {
     @Id
     @Column(name = "\"AcountUID\"", nullable = false)
     private UUID id;
@@ -36,6 +33,18 @@ public class Account {
 
     @Column(name = "\"DatetimeEdt\"")
     private OffsetDateTime datetimeEdt;
+
+    @ManyToOne(fetch = FetchType.LAZY, optional = false)
+    @JoinColumn(name = "\"CurrencyCode\"", nullable = false)
+    private CountryCurrencei currencyCode;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "\"BranchID\"")
+    private Branch branchID;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "\"BranchTerminalID\"")
+    private BranchTerminal branchTerminalID;
 
     public UUID getId() {
         return id;
@@ -99,6 +108,30 @@ public class Account {
 
     public void setDatetimeEdt(OffsetDateTime datetimeEdt) {
         this.datetimeEdt = datetimeEdt;
+    }
+
+    public CountryCurrencei getCurrencyCode() {
+        return currencyCode;
+    }
+
+    public void setCurrencyCode(CountryCurrencei currencyCode) {
+        this.currencyCode = currencyCode;
+    }
+
+    public Branch getBranchID() {
+        return branchID;
+    }
+
+    public void setBranchID(Branch branchID) {
+        this.branchID = branchID;
+    }
+
+    public BranchTerminal getBranchTerminalID() {
+        return branchTerminalID;
+    }
+
+    public void setBranchTerminalID(BranchTerminal branchTerminalID) {
+        this.branchTerminalID = branchTerminalID;
     }
 
 }

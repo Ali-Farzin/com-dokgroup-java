@@ -22,6 +22,7 @@ public class AccountsActionType {
     @Column(name = "\"DatetimeEdt\"")
     private OffsetDateTime datetimeEdt;
 
+    // Getters & Setters
     public Long getId() {
         return id;
     }

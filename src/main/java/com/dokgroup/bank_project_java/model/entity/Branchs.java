@@ -6,7 +6,7 @@ import java.time.OffsetDateTime;
 
 @Entity
 @Table(name = "\"Branchs\"", schema = "Comn")
-public class Branch {
+public class Branchs {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "Branchs_id_gen")
     @SequenceGenerator(name = "Branchs_id_gen", sequenceName = "Branchs_BranchID_seq", allocationSize = 1)
@@ -25,6 +25,7 @@ public class Branch {
     @Column(name = "\"DatetimeEdt\"")
     private OffsetDateTime datetimeEdt;
 
+    // Getters & Setters
     public Long getId() {
         return id;
     }

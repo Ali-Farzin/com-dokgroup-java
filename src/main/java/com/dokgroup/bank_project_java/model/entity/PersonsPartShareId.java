@@ -16,6 +16,7 @@ public class PersonsPartShareId implements java.io.Serializable {
     @Column(name = "\"PersonUID\"", nullable = false)
     private UUID personUID;
 
+    // Getters & Setters
     public Long getPersonID() {
         return personID;
     }

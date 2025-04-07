@@ -6,15 +6,15 @@ import java.time.OffsetDateTime;
 
 @Entity
 @Table(name = "\"AccountsCards\"", schema = "Acnt")
-public class AccountsCard {
+public class AccountsCards {
     @SequenceGenerator(name = "AccountsCards_id_gen", sequenceName = "AccountsActionType_AccountsActionTypeID_seq", allocationSize = 1)
     @EmbeddedId
-    private AccountsCardId id;
+    private AccountsCardsId id;
 
     @MapsId("accountUID")
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "\"AccountUID\"", nullable = false)
-    private Account accountUID;
+    private Accounts accountUID;
 
     @Column(name = "\"DatetimeCrt\"", nullable = false)
     private OffsetDateTime datetimeCrt;
@@ -22,19 +22,20 @@ public class AccountsCard {
     @Column(name = "\"DatetimeEdt\"")
     private OffsetDateTime datetimeEdt;
 
-    public AccountsCardId getId() {
+    // Getters & Setters
+    public AccountsCardsId getId() {
         return id;
     }
 
-    public void setId(AccountsCardId id) {
+    public void setId(AccountsCardsId id) {
         this.id = id;
     }
 
-    public Account getAccountUID() {
+    public Accounts getAccountUID() {
         return accountUID;
     }
 
-    public void setAccountUID(Account accountUID) {
+    public void setAccountUID(Accounts accountUID) {
         this.accountUID = accountUID;
     }
 

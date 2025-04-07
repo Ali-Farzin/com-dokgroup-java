@@ -14,7 +14,7 @@ public class AccountsOwner {
 
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "\"AccountUID\"", nullable = false)
-    private Account accountUID;
+    private Accounts accountUID;
 
     @Column(name = "\"AccountsOwnerStatus\"", nullable = false)
     private Integer accountsOwnerStatus;
@@ -31,6 +31,7 @@ public class AccountsOwner {
     @Column(name = "\"DatetimeEdt\"")
     private OffsetDateTime datetimeEdt;
 
+    // Getters & Setters
     public UUID getId() {
         return id;
     }
@@ -39,11 +40,11 @@ public class AccountsOwner {
         this.id = id;
     }
 
-    public Account getAccountUID() {
+    public Accounts getAccountUID() {
         return accountUID;
     }
 
-    public void setAccountUID(Account accountUID) {
+    public void setAccountUID(Accounts accountUID) {
         this.accountUID = accountUID;
     }
 

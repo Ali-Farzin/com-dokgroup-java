@@ -8,14 +8,15 @@ import java.util.Objects;
 import java.util.UUID;
 
 @Embeddable
-public class CardsPermitId implements java.io.Serializable {
-    private static final long serialVersionUID = -8347221052912187022L;
+public class CardsPermitsId implements java.io.Serializable {
+    private static final long serialVersionUID = -6845288516873617768L;
     @Column(name = "\"CardUID\"", nullable = false)
     private UUID cardUID;
 
     @Column(name = "\"CardsActionTypeID\"", nullable = false)
     private Long cardsActionTypeID;
 
+    // Getters & Setters
     public UUID getCardUID() {
         return cardUID;
     }
@@ -36,7 +37,7 @@ public class CardsPermitId implements java.io.Serializable {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || Hibernate.getClass(this) != Hibernate.getClass(o)) return false;
-        CardsPermitId entity = (CardsPermitId) o;
+        CardsPermitsId entity = (CardsPermitsId) o;
         return Objects.equals(this.cardUID, entity.cardUID) &&
                 Objects.equals(this.cardsActionTypeID, entity.cardsActionTypeID);
     }

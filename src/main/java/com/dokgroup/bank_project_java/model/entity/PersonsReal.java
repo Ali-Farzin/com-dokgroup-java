@@ -46,6 +46,7 @@ public class PersonsReal {
     @Column(name = "\"DatetimeEdt\"")
     private OffsetDateTime datetimeEdt;
 
+    // Getters & Setters
     public UUID getId() {
         return id;
     }

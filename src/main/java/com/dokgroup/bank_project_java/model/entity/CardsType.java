@@ -27,6 +27,7 @@ public class CardsType {
     @Column(name = "\"DatetimeEdt\"")
     private OffsetDateTime datetimeEdt;
 
+    // Getters & Setters
     public Short getId() {
         return id;
     }

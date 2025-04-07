@@ -7,7 +7,7 @@ import java.time.Instant;
 
 @Entity
 @Table(name = "\"CountryCurrenceis\"", schema = "Comn")
-public class CountryCurrencei {
+public class CountryCurrenceis {
     @Id
     @SequenceGenerator(name = "CountryCurrenceis_id_gen", sequenceName = "CardsType_CardsTypeID_seq", allocationSize = 1)
     @Column(name = "\"CurrencyCode\"", nullable = false, length = 6)
@@ -32,6 +32,7 @@ public class CountryCurrencei {
     @Column(name = "\"DatetimeEdt\"")
     private Instant datetimeEdt;
 
+    // Getters & Setters
     public String getCurrencyCode() {
         return currencyCode;
     }

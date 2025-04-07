@@ -10,7 +10,7 @@ import java.util.UUID;
 
 @Entity
 @Table(name = "\"Cards\"", schema = "Card")
-public class Card {
+public class Cards {
     @Id
     @Column(name = "\"CardUID\"", nullable = false)
     private UUID id;
@@ -27,6 +27,7 @@ public class Card {
     @Column(name = "\"DatetimeEdt\"")
     private OffsetDateTime datetimeEdt;
 
+    // Getters & Setters
     public UUID getId() {
         return id;
     }

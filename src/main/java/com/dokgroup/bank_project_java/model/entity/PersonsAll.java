@@ -22,6 +22,7 @@ public class PersonsAll {
     @Column(name = "\"PersonIsActive\"")
     private Boolean personIsActive;
 
+    // Getters & Setters
     public Long getId() {
         return id;
     }

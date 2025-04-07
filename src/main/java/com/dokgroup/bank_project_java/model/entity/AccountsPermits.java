@@ -8,9 +8,9 @@ import java.time.OffsetDateTime;
 
 @Entity
 @Table(name = "\"AccountsPermits\"", schema = "Acnt")
-public class AccountsPermit {
+public class AccountsPermits {
     @EmbeddedId
-    private AccountsPermitId id;
+    private AccountsPermitsId id;
 
     @MapsId("accountsActionTypeID")
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
@@ -42,11 +42,12 @@ public class AccountsPermit {
     @Column(name = "\"DatetimeEdt\"")
     private OffsetDateTime datetimeEdt;
 
-    public AccountsPermitId getId() {
+    // Getters & Setters
+    public AccountsPermitsId getId() {
         return id;
     }
 
-    public void setId(AccountsPermitId id) {
+    public void setId(AccountsPermitsId id) {
         this.id = id;
     }
 

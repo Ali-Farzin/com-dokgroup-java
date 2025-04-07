@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="JpaBuddyIdeaProjectConfig">
+  <component name="JpaBuddyIdeaProjectConfig" reUseTableSchema="true">
     <option name="reLastEntityCreationPackage" value="src/main/java/com/dokgroup/bank_project_java/model/entity" />
     <option name="reverseEngineeringLastDbConnectionId" value="eb146e92-3ca3-42ab-9cf2-18d063a5f718" />
   </component>

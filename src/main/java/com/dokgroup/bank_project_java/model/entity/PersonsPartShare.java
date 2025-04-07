@@ -38,6 +38,7 @@ public class PersonsPartShare {
     @Column(name = "\"DatetimeEdt\"")
     private OffsetDateTime datetimeEdt;
 
+    // Getters & Setters
     public PersonsPartShareId getId() {
         return id;
     }

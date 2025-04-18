@@ -11,9 +11,9 @@ import java.util.UUID;
 
 @Entity
 @Table(name = "\"Accounts\"", schema = "Acnt")
-public class Accounts {
+public class Account {
     @Id
-    @Column(name = "\"AccountUID\"", nullable = false)
+    @Column(name = "\"AcountUID\"", nullable = false)
     private UUID id;
 
     @Column(name = "\"AccountNo\"", nullable = false, length = 25)
@@ -25,8 +25,8 @@ public class Accounts {
     @Column(name = "\"OpenDate\"")
     private LocalDate openDate;
 
-    @Column(name = "\"AccountStatus\"")
-    private Short AccountStatus;
+    @Column(name = "\"AcountStatus\"")
+    private Short acountStatus;
 
     @Column(name = "\"AccountIsActive\"")
     private Boolean accountIsActive;
@@ -37,7 +37,6 @@ public class Accounts {
     @Column(name = "\"DatetimeEdt\"")
     private OffsetDateTime datetimeEdt;
 
-    // Getters & Setters
     public UUID getId() {
         return id;
     }
@@ -70,12 +69,12 @@ public class Accounts {
         this.openDate = openDate;
     }
 
-    public Short getAccountStatus() {
-        return null;
+    public Short getAcountStatus() {
+        return acountStatus;
     }
 
-    public void setAccountStatus(Short accountStatus) {
-//        this.accountStatus = accountStatus;
+    public void setAcountStatus(Short acountStatus) {
+        this.acountStatus = acountStatus;
     }
 
     public Boolean getAccountIsActive() {
